@@ -51,4 +51,5 @@ class Product private constructor(
 
 data class ProductId(override val value: UUID) : EntityId() {
     constructor() : this(UUID.randomUUID())
+    constructor(value: String) : this(UUID.fromString(value))
 }
